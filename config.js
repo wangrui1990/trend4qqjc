@@ -4,7 +4,7 @@
 
 var config = {
 
-  db: 'mongodb://127.0.0.1/node_club_dev',
+  db: 'mongodb://127.0.0.1/trend_dev',
 
 };
 module.exports = config;
