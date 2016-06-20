@@ -14,4 +14,6 @@ mongoose.connect(config.db, {
 
 // models
 require('./lottreyResult');
-exports.Reply        = mongoose.model('Reply');
+require('./config');
+exports.Config        = mongoose.model('Config');
+exports.Batch        = mongoose.model('Batch');

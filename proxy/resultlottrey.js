@@ -2,14 +2,17 @@
  * Created by wr on 2016/6/17.
  */
 var models     = require('../models');
-var Reply      = models.Reply;
+var Batch      = models.Batch;
 
-exports.newAndSave = function (kjtime, kjjg, callback) {
-    var reply       = new Reply();
-    reply.kjtime   = kjtime;
-    reply.kjjg  = kjjg;
+exports.newAndSave = function (batchno, batchresult,starttime, textResult, callback) {
 
-    reply.save(function (err) {
-        callback(err, reply);
+    var batch       = new Batch();
+    batch.batchno   = batchno;
+    batch.batchresult  = batchresult;
+    batch.starttime   = starttime;
+    batch.textResult  = textResult;
+    console.log(batch);
+    batch.save(function (err) {
+        callback(err, batch);
     });
 };

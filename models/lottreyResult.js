@@ -5,10 +5,11 @@ var mongoose  = require('mongoose');
 var Schema    = mongoose.Schema;
 
 
-var ReplySchema = new Schema({
-    kjtime: { type: Date },
-    kjjg: { type: String}
-
+var BatchSchema = new Schema({
+    batchno: { type: String, unique: true },
+    batchresult: { type: Array},
+    starttime: { type: Date},
+    textResult: { type: String}
 });
 
-mongoose.model('Reply', ReplySchema);
+mongoose.model('Batch', BatchSchema);
